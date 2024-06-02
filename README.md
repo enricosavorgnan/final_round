@@ -54,7 +54,7 @@ Here it is a general description of what every file does:
 - get_cv.py: detection of people in a room
 - get_targets.py: calculate and returns the optimal values of co2, temperature, humidity, pressure and brightness in a room according to the needs of the user
 - get_audio.py: text-to-speech
-- get_actions.py: communicates with all the other files and send the data to the client using sockets.
+- main.py: communicates with all the other files and send the data to the client using sockets.
 - fine_tuning.ipynb: fine tune the llm model gpt 3.5 turbo
 - train_nn.ipynb: train the neural network 
 
@@ -64,7 +64,7 @@ Here it is a general description of what every file does:
 2. Fine tune the llm running the file fine_tuning.ipynb
 3. Train the neural network running the file train_nn.ipynb
 4. One trained, the model will be loaded in my_model.h5
-5. Run the file get_actions.py
+5. Run the file main.py
 
 
 ### FUTURE IMPROVEMENT
