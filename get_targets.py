@@ -40,6 +40,7 @@ def get_target(my_query):
     return result
 
 
+# these function is used for the part of speech to text when the user communicates with the assistant
 def get_transcription(my_audio):
     with open("speech.wav", "wb") as f:
         f.write(my_audio.get_wav_data())
