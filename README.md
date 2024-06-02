@@ -2,6 +2,7 @@
 ## CHALLENGE THEME: Smart Home & GenAI
 
 ### DESCRIPTION OF OUR IDEA
+
 We first start gathering ideas in order to understand how generative AI could be useful to make a home smart. <br>
 Considering that we could have access to some measurments regarding levels of CO2, temperature and pressure in all the rooms of a house, 
 we focused on the following theme: "**create an AI assistant which, according to our needs and request at every time of the day, can suggest how to manage the windows and the shutters of a room in order to create the healthiest and most suitable environment**". 
@@ -33,6 +34,8 @@ Therefore, our idea is based on the following features:
 ### TECHINICAL SPECIFICATIONS
 In order to develop the whole idea, we create a complex AI-integrated model, which is structred as follows: 
 
+![Visual description of the whole model](Layer.jpg)
+
 - STEP 1: **GENERATION OF SYNTHETIC DATASETS:** We used gpt-4o to create syntethic data in order to train and test our model. We created the syntethic dataset keeping into consideration all the correlations between variables, for example the number of people in a room is related positively to the levels of CO2 in a room.
   
 - STEP 2: **FINE-TUNING OF A LLM:** We fine-tuned the model "gpt3.5-turbo-1106" in order to train it to predict the optimal values of CO2, humidity, brightning, pressure, temperature according to the needs and the request of the user. In order to fine-tune we used the Fine_Tuning Playgrounf of OpenAI.
@@ -44,8 +47,6 @@ In order to develop the whole idea, we create a complex AI-integrated model, whi
 ![Loss function for the training of the neural network](loss_fun_neural_network.png)
   
 - STEP 5: **GIVE THE OUTPUT OF THE NEURAL NETWORK TO THE GENAI ASSISTANT:** Once we have calculated the optimal status of each window and each shutter we pass them to our generative AI so that it can interpret them and formulate meaningful sentences for the user giving advices. For the part of STT and TTS we use whisper and OpenAI tts.
-
-![Visual description of the whole model](Layer.jpg)
 
 ### DESCRIPTION OF THE FILES IN THIS REPOSITORY
 A more detailed description of the single functions and the whole structure of the code can be found inside every file. 
