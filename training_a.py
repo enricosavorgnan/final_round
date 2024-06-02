@@ -1,7 +1,7 @@
 from openai import OpenAI
 import speech_recognition as sr
 
-client = OpenAI(api_key='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')
+client = OpenAI(api_key='YOUR_OPENAI_API_KEY_GOES_HERE')
 
 
 def get_target(my_query):
