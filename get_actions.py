@@ -19,7 +19,7 @@ def get_current_state(data):
     # get the amount of people in the room thanks to the computer vision model
     n_people = get_cv.main()
 
-    # get the other values from the dataset
+    # get the other values from the dataset. we consider the mean of the last 5 misuration, which mean the last 5 minutes of measurments
     ext_temperature = data['ext_temperature'].tail(5).mean()
     temperature_now = data['temperature_now'].tail(5).mean()
     pressure_now = data['pressure_now'].tail(5).mean()
@@ -30,6 +30,7 @@ def get_current_state(data):
     window1_now, window2_now, window3_now, window4_now = np.array(data.tail(1)['window1_now'])[0], np.array(data.tail(1)['window2_now'])[0], np.array(data.tail(1)['window3_now'])[0], np.array(data.tail(1)['window4_now'])[0]
     shutter1_now, shutter2_now, shutter3_now, shutter4_now = np.array(data.tail(1)['shutter1_now'])[0], np.array(data.tail(1)['shutter2_now'])[0], np.array(data.tail(1)['shutter3_now'])[0], np.array(data.tail(1)['shutter4_now'])[0]
 
+    # we consider date, time and room_size separately because they have a different format or a different function
     date = np.array(data.tail(1)['date'])[0]
     time = np.array(data.tail(1)['time'])[0]
     room_size = np.array(data.tail(1)['room_size'])[0]
