@@ -3,7 +3,7 @@
 
 ### DESCRIPTION OF OUR IDEA
 
-We first start gathering ideas in order to understand how generative AI could be useful to make a home smart. <br>
+We first started gathering ideas in order to understand how generative AI could be useful to make a home smart. <br>
 Considering that we could have access to some measurments regarding levels of CO2, temperature and pressure in all the rooms of a house, 
 we focused on the following theme: "**create an AI assistant which, according to our needs and request at every time of the day, can suggest how to manage the windows and the shutters of a room in order to create the healthiest and most suitable environment**". 
 Therefore, our idea is based on the following features: 
@@ -18,7 +18,7 @@ Therefore, our idea is based on the following features:
 - levels of CO2 in a room in ppm
 - level of humidity in a room 
 - level of brightining in a room
-- level of pression in a room in atm
+- level of pressure in a room in atm
 - sensor that detects if a window is opened or closed
 - sensor that detects how much a shutter is down: it gives a percentage according to the dimensions of the window
 - microphone in every room of the house in order to let people communicate with the assistant
@@ -38,7 +38,7 @@ In order to develop the whole idea, we create a complex AI-integrated model, whi
 
 - STEP 1: **GENERATION OF SYNTHETIC DATASETS:** We used gpt-4o to create syntethic data in order to train and test our model. We created the syntethic dataset keeping into consideration all the correlations between variables, for example the number of people in a room is related positively to the levels of CO2 in a room.
   
-- STEP 2: **FINE-TUNING OF A LLM:** We fine-tuned the model "gpt3.5-turbo-1106" in order to train it to predict the optimal values of CO2, humidity, brightning, pressure, temperature according to the needs and the request of the user. In order to fine-tune we used the Fine_Tuning Playgrounf of OpenAI.
+- STEP 2: **FINE-TUNING OF A LLM:** We fine-tuned the model "gpt3.5-turbo-1106" in order to train it to predict the optimal values of CO2, humidity, brightning, pressure, temperature according to the needs and the request of the user. In order to fine-tune we used the Fine_Tuning Playground of OpenAI.
 ![Loss function for the fine tuning of LLM](loss_fun_fine_tuning.png)
   
 - STEP 3: **PEOPLE DETECTION:** In order to train the model to optimize windows and shutters of a room, we need to know how many people are in the room during a specific moment. To do that, we used a python library of computer vision, yolo, in order to detect, recognize and calculate the number of humans in a room.
