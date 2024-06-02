@@ -2,7 +2,7 @@ from openai import OpenAI
 
 client = OpenAI(api_key='sk-proj-TVRJgZLveipYXfH6ufQZT3BlbkFJslnLIAYVY6vh6LEeO22e')
 
-
+# These function interpretates the instructions given as a result from the neural network
 def get_tiny_text(instructions):
     content = """
     You are an helpful assistant. I will give to you list of string. 
@@ -10,7 +10,7 @@ def get_tiny_text(instructions):
     Return ONLY the fancy string.
     """
     instructions = ', '.join(instructions)
-
+    # we use gpt-4o-model to formulate sentences
     response = client.chat.completions.create(
         model="gpt-4o",
         messages=[
