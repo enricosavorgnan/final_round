@@ -3,7 +3,7 @@
 
 ### DESCRIPTION OF OUR IDEA
 We first start gathering ideas in order to understand how generative AI could be useful to make a home smart. <br>
-Considering that we could have access to some measurments regarding levels of CO2, temperature and pression in all the rooms of a house, 
+Considering that we could have access to some measurments regarding levels of CO2, temperature and pressure in all the rooms of a house, 
 we focused on the following theme: "**create an AI assistant which, according to our needs and request at every time of the day, can suggest how to manage the windows and the shutters of a room in order to create the healthiest and most suitable environment**". 
 Therefore, our idea is based on the following features: 
 1. **FULL KNOWLEDGE OF THE HOUSE**: we developed an application where you can set up some important information about your house, like:
@@ -34,4 +34,7 @@ In order to develop the whole idea, we create a complex AI-integrated model, whi
 - STEP 5: **GIVE THE OUTPUT OF THE NEURAL NETWORK TO THE GENAI ASSISTANT:** Once we have calculated the optimal status of each window and each shutter we pass them to our generative AI so that it can interpret them and formulate meaningful sentences for the user giving advices. For the part of STT and TTS we use whisper and OpenAI tts.
 
 ### DESCRIPTION OF THE FILES IN THIS REPOSITORY
-- 
+- get_cv.py: detection of people in a room
+- get_targets.py: calculate and returns the optimal values of co2, temperature, humidity, pressure and brightness in a room according to the needs of the user
+- get_audio.py: text-to-speech
+- get_actions.py: communicates with all the other files and send the data to the client using sockets.  
