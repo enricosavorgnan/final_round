@@ -1,7 +1,7 @@
 from openai import OpenAI
 import speech_recognition as sr
 
-client = OpenAI(api_key='sk-proj-TVRJgZLveipYXfH6ufQZT3BlbkFJslnLIAYVY6vh6LEeO22e')
+client = OpenAI(api_key='YOUR_OPENAI_API_KEY_GOES_HERE')
 
 
 def get_target(my_query):
@@ -40,11 +40,17 @@ def get_target(my_query):
     return result
 
 
-# these function is used for the part of speech to text when the user communicates with the assistant
 def get_transcription(my_audio):
+    # ------------------------------------------------------------------- #
+    # This function is used to get the transcription of the user prompt.  #
+    # input: my_audio - the user prompt                                   #
+    # output: transcription - the transcription of the user prompt        #
+    # ------------------------------------------------------------------- #
+
+    # open the audio file
     with open("speech.wav", "wb") as f:
         f.write(my_audio.get_wav_data())
-        speech = open("speech.wav", "rb")
+        speech = open("media/speech.wav", "rb")
         transcription = client.audio.transcriptions.create(
             model="whisper-1",
             file=speech,
@@ -54,6 +60,11 @@ def get_transcription(my_audio):
 
 
 def main():
+    # ------------------------------------------------------------------- #
+    # This function is used to get the target data from the user prompt.  #
+    # output: target - the target data                                    #
+    # ------------------------------------------------------------------- #
+
     # Recognize the user prompt
     recognizer = sr.Recognizer()
     microphone = sr.Microphone()
