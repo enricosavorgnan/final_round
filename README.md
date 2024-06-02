@@ -12,9 +12,9 @@ Therefore, our idea is based on the following features:
 - number of windows of every room
 - dimension of each window
 2. **SMART SENSORS**: data about the house are collected by smart sensor which provide data to the genAI assistant. In particular, the sensors collect data about:
-- temperature in a room
+- temperature in a room in celsius
 - levels of CO2 in a room in ppm
-- level of humidity in a room in celsius
+- level of humidity in a room 
 - level of brightining in a room
 - level of pression in a room in atm
 - sensor that detects if a window is opened or closed
