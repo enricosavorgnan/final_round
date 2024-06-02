@@ -36,6 +36,7 @@ In order to develop the whole idea, we create a complex AI-integrated model, whi
 - STEP 1: **GENERATION OF SYNTHETIC DATASETS:** We used gpt-4o to create syntethic data in order to train and test our model. We created the syntethic dataset keeping into consideration all the correlations between variables, for example the number of people in a room is related positively to the levels of CO2 in a room.
   
 - STEP 2: **FINE-TUNING OF A LLM:** We fine-tuned the model "gpt3.5-turbo-1106" in order to train it to predict the optimal values of CO2, humidity, brightning, pressure, temperature according to the needs and the request of the user. In order to fine-tune we used the Fine_Tuning Playgrounf of OpenAI.
+![Loss function for the fine tuning of LLM](loss_fun_fine_tuning.png)
   
 - STEP 3: **PEOPLE DETECTION:** In order to train the model to optimize windows and shutters of a room, we need to know how many people are in the room during a specific moment. To do that, we used a python library of computer vision, yolo, in order to detect, recognize and calculate the number of humans in a room.
   
@@ -43,6 +44,7 @@ In order to develop the whole idea, we create a complex AI-integrated model, whi
   
 - STEP 5: **GIVE THE OUTPUT OF THE NEURAL NETWORK TO THE GENAI ASSISTANT:** Once we have calculated the optimal status of each window and each shutter we pass them to our generative AI so that it can interpret them and formulate meaningful sentences for the user giving advices. For the part of STT and TTS we use whisper and OpenAI tts.
 
+![Visual description of the whole model](Layer.jpg)
 
 ### DESCRIPTION OF THE FILES IN THIS REPOSITORY
 - get_cv.py: detection of people in a room
