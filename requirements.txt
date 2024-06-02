@@ -1,1 +1,14 @@
+Here is a list of all the libraries and packages you need to install or import in order to have a complete and right setup
+
+1. tensorflow
+2. pandas
+3. numpy
+4. homeassistant_api
+5. cv2
+6. torch
+7. yolov5s
+8. openai
+9. speech_recognition
+10. whisper
+11. matplotlib
 
