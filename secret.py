@@ -1,2 +1,0 @@
-# Home Assistant
-ha_access_token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJkYWMzZjZiYzI2OGM0ZWU3OTFhNDNlOTdhMTkyM2UxMiIsImlhdCI6MTcxNzIzNTM3NCwiZXhwIjoyMDMyNTk1Mzc0fQ.RcW7VwoCu1AS3VYIaz7K1qD5-eQtCXE8ouywtSwhUXc'
