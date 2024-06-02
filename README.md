@@ -48,6 +48,8 @@ In order to develop the whole idea, we create a complex AI-integrated model, whi
 ![Visual description of the whole model](Layer.jpg)
 
 ### DESCRIPTION OF THE FILES IN THIS REPOSITORY
+A more detailed description of the single functions and the whole structure of the code can be found inside every file. 
+Here it is a general description of what every file does: 
 - get_cv.py: detection of people in a room
 - get_targets.py: calculate and returns the optimal values of co2, temperature, humidity, pressure and brightness in a room according to the needs of the user
 - get_audio.py: text-to-speech
